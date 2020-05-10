@@ -37,10 +37,10 @@ namespace BookWormClub
             services.AddDbContext<ApplicationDbContext>(o => o.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddControllersWithViews()
-                    // .AddRazorPagesOptions(o =>
-			        // {
-				    //     o.Conventions.ConfigureFilter(new IgnoreAntiforgeryTokenAttribute());
-			        // })
+                    .AddRazorPagesOptions(o =>
+			        {
+				        o.Conventions.ConfigureFilter(new IgnoreAntiforgeryTokenAttribute());
+			        })
                     .AddRazorRuntimeCompilation();
 
         }
