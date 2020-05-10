@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: bookwormap-pod
-        image: kopi/book:latest
+        image: CONTAINER_IMAGE
         imagePullPolicy: Always
         resources:
           requests:
